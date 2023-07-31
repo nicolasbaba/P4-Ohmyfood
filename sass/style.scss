@@ -1,0 +1,147 @@
+// general
+
+$cyan-soft : #99E2D0 ;
+$cyan-strong:#008766;
+$bleu-soft:#89C8FA;
+$bleu-deep:#003A68;
+$violet-soft:#9356DC;
+$background-menu-restaurants-location:#EAEAEA;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 400;
+    font-family: 'Shrikhand';
+    width: 375px;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+// mixin
+
+@mixin h1-accueil{
+    font-family:'Shrikhand';
+    height: 63px;
+    text-align: center;
+    padding:14px 89px 13px 89px ;
+}
+
+@mixin h1-restaurant{
+    font-family: 'Shrikhand';
+    height: 63px;
+    text-align: center;
+    padding: 14px 89px 13px 17px;
+}
+
+@mixin shadow-button{
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+// header
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    h1{
+        @include h1-accueil;
+    }
+    .location{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 50px;
+        background-color:$background-menu-restaurants-location ;
+        gap:17px ;
+    }
+    input{
+        border: none;
+        background-color:$background-menu-restaurants-location ;
+        font-size:16px; 
+        font-weight: bold; 
+        width: 120px; 
+    }  
+}
+
+//   reserevation
+
+.resa{
+    height: 287px;
+    display: flex;
+    flex-direction: column;
+    background-color:#F6F6F6 ;
+ 
+    h2{
+        padding: 39px 58px 0px 42px;
+        display: flex;
+        justify-content:space-evenly;
+        text-align: center;
+    }
+    p{
+        padding:0 26px 27px 34px ;  
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    button{
+        width: 218px;
+        height: 50px;
+        border-radius: 25px;
+        border: none;
+        // color: #ffff;       
+        @include shadow-button;
+        margin-left:auto;
+        margin-right:auto ;
+    }
+}
+
+// fonctionement
+
+.functioning{
+    width: 100%;
+    height: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    h2{
+       padding: 48px 80px 0px 20px;
+    }
+    p{
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+    }
+    button{
+        align-items: center;
+        width: 322.486px;
+        height: 72.379px;
+        border-radius: 20px;
+        border: none;
+        @include shadow-button;
+        margin-left: auto;
+        margin-right: auto;
+    }
+   
+}
