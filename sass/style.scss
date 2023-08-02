@@ -4,7 +4,8 @@ $cyan-soft : #99E2D0 ;
 $cyan-strong:#008766;
 $bleu-soft:#89C8FA;
 $bleu-deep:#003A68;
-$violet-soft:#9356DC;
+$purple-soft:#9356DC;
+$blanc-gris:#F6F6F6;
 $background-menu-restaurants-location:#EAEAEA;
 
 * {
@@ -36,12 +37,15 @@ p {
     font-weight: 300;
 }
 
-
+a{
+    text-decoration: none;
+    color: black;
+}
 // mixin
 
 @mixin h1-accueil{
     font-family:'Shrikhand';
-    height: 63px;
+    height: 70px;
     text-align: center;
     padding:14px 89px 13px 89px ;
 }
@@ -53,9 +57,19 @@ p {
     padding: 14px 89px 13px 17px;
 }
 
-@mixin shadow-button{
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+@mixin h3-footer{
+    font-family: 'Shrikhand';
+    display: flex;
+    padding-right: 0px;
+    font-weight: 400;
+    line-height: normal;
 }
+
+@mixin shadow-button-cards{
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
 
 
 // header
@@ -64,6 +78,8 @@ header{
     flex-direction: column;
     align-items: center;  
     h1{
+        width: 100%;
+        height: 63px;
         @include h1-accueil;
     }
     .location{
@@ -85,13 +101,15 @@ header{
     }  
 }
 
-//   reserevation
+//   reservation
 
 .resa{
-    height: 287px;
+    width: 100%;
+    height: 287.5px;
     display: flex;
     flex-direction: column;
-    background-color:#F6F6F6 ;
+    background-color:$blanc-gris;
+    align-items: center;
  
     h2{
         padding: 39px 58px 0px 42px;
@@ -105,18 +123,24 @@ header{
         justify-content: space-evenly;
         text-align: center;
     }
-    button{
+    .button{
+        text-decoration: none;
+        text-align: center;
+        padding: 15px;
         width: 218px;
         height: 50px;
         border-radius: 25px;
-        border: none;
-        // color: #ffff;       
-        @include shadow-button;
-        margin-left:auto;
-        margin-right:auto ;
+        color: #ffff;       
+        @include shadow-button-cards;
+        background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+        font-weight: bold;
+        opacity: 1;
+        transition: opacity 450ms;
+    }
+    .button:hover {
+        opacity:0.8;
     }
 }
-
 // fonctionement
 
 .functioning{
@@ -124,24 +148,115 @@ header{
     height: 440px;
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    h2{
-       padding: 48px 80px 0px 20px;
+    h2 {
+        padding: 48px 80px 0px 20px;
     }
     p{
+        display: flex;
+        justify-content: space-evenly;
+        padding-top: 4px;
+        border-radius: 50%;
         width: 24px;
         height: 24px;
-        border-radius: 50%;
+        background-color: $purple-soft;
+        font-size: 14.182px;
+        margin-left: -12.5px;
+        color: #ffff;
     }
-    button{
-        align-items: center;
-        width: 322.486px;
+    ul{
+        margin: 26px 20px 68px 33px; 
+    }
+    li{
+        width: 100%;
         height: 72.379px;
+        list-style: none;
+        align-items: center;
+        display: flex;
+        @include shadow-button-cards;
         border-radius: 20px;
-        border: none;
-        @include shadow-button;
         margin-left: auto;
         margin-right: auto;
+        font-weight: bold;
+        gap: 20px;
+        margin-bottom: 25px;
     }
    
+}
+
+// restaurant
+
+.section-restaurant{
+    padding: 0 18px 66px 17px ;
+    h2 {
+        padding: 48px 80px 0px 3px;
+        
+    }
+    .cards{
+        @include shadow-button-cards;
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 18px;
+    }
+    .cards img{
+        border-radius:15px 15px 0 0;
+        width: 100%;
+        height: 231px;
+        object-fit: cover;
+        position: "";
+    }
+    .new-badge {
+        border-radius: 2px;
+        background-color: var(--green, #99E2D0);
+        position:absolute;
+        padding: 5px 10px;
+        // top: 0;
+        right: 30px;
+        // top: 15px;
+        margin-top: 15px;
+        color:var(--green-font, #008766);
+        font-size: 14px;
+        z-index: 100;
+    }
+    
+    .card-texte{
+        border-radius: 15px;
+        height: 61px;
+    }
+    h3{
+        width: 267px;  
+        // height: 20px;
+        margin:16px 0 5px 13px;
+    }
+    p{
+        width: 267px;
+        margin: 0 0 12px 13px;
+        font-size: 17px;
+    }
+    .fa-regular{
+        width: 22px;
+        height: 21px;
+        float: right;
+        margin-top: 5px;
+        margin-right: 20px;
+    }
+    .fa-heart:click{
+        background-color: #9356DC;
+    }
+}
+
+// footer
+
+footer{
+    padding: 22px 25px;
+    background:#353535;
+    color: #fff;
+    h3{
+        @include h3-footer
+    }
+    p{
+        font-size:16px;
+    }
+    img{
+        margin-right: 11px;
+    }
 }
