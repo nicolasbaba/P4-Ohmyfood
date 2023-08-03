@@ -93,7 +93,7 @@ header input {
   color: white;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: none;
-  background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+  background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
   font-weight: bold;
   opacity: 1;
   transition: opacity 450ms;
@@ -151,9 +151,8 @@ header input {
 .section-restaurant .cards {
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   border: none;
-  width: 100%;
   border-radius: 15px;
-  margin-bottom: 18px;
+  margin-top: 18px;
 }
 .section-restaurant .cards img {
   border-radius: 15px 15px 0 0;
@@ -161,7 +160,6 @@ header input {
   height: 231px;
   -o-object-fit: cover;
      object-fit: cover;
-  position: "";
 }
 .section-restaurant .new-badge {
   border-radius: 2px;
@@ -172,7 +170,6 @@ header input {
   margin-top: 15px;
   color: var(--green-font, #008766);
   font-size: 14px;
-  z-index: 100;
 }
 .section-restaurant .card-texte {
   border-radius: 15px;
@@ -187,15 +184,26 @@ header input {
   margin: 0 0 12px 13px;
   font-size: 17px;
 }
-.section-restaurant .fa-regular {
-  width: 22px;
-  height: 21px;
-  float: right;
+.section-restaurant .fa-regular, .section-restaurant .fa-solid {
+  right: 30px;
   margin-top: 5px;
   margin-right: 20px;
+  position: absolute;
 }
-.section-restaurant .fa-heart:click {
-  background-color: #9356DC;
+.section-restaurant .fa-solid {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+.section-restaurant .fa-solid:hover {
+  opacity: 1;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+}
+.section-restaurant .fa-solid:not(:hover):after {
+  animation: opacity 300ms linear infinite;
+  animation-fill-mode: forwards;
 }
 
 footer {
@@ -205,10 +213,9 @@ footer {
 }
 footer h3 {
   font-family: "Shrikhand";
-  display: flex;
-  padding-right: 0px;
+  margin-bottom: 16px;
   font-weight: 400;
-  line-height: normal;
+  font-size: 19px;
 }
 footer p {
   font-size: 16px;
