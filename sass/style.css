@@ -27,11 +27,6 @@ p {
   font-weight: 300;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
 header {
   display: flex;
   flex-direction: column;
@@ -100,6 +95,7 @@ header input {
 }
 .resa .button:hover {
   opacity: 0.8;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
 }
 
 .functioning {
@@ -168,7 +164,7 @@ header input {
   padding: 5px 10px;
   right: 30px;
   margin-top: 15px;
-  color: var(--green-font, #008766);
+  color: #008766;
   font-size: 14px;
 }
 .section-restaurant .card-texte {
@@ -183,6 +179,10 @@ header input {
   width: 267px;
   margin: 0 0 12px 13px;
   font-size: 17px;
+}
+.section-restaurant a {
+  text-decoration: none;
+  color: black;
 }
 .section-restaurant .fa-regular, .section-restaurant .fa-solid {
   right: 30px;
@@ -222,4 +222,8 @@ footer p {
 }
 footer img {
   margin-right: 11px;
+}
+footer .lien-contact {
+  text-decoration: none;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */
