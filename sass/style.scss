@@ -99,6 +99,8 @@ p {
 }
 
 // loader
+
+
 .loader {
     position:fixed;
     top: 0;
@@ -192,8 +194,8 @@ header{
         width: 120px;
         color: black;
         &::placeholder {
-                color: black;
-            }
+                color: black;        
+             }
     }
   
 }
@@ -435,3 +437,7 @@ header{
 footer {
     @include footer
 }
+
+
+
+

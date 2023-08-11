@@ -1,0 +1,232 @@
+
+$cyan-soft : #99E2D0;
+$cyan-strong: #008766;
+$bleu-soft: #89C8FA;
+$bleu-deep: #003A68;
+$purple-soft: #9356DC;
+$blanc-gris: #F6F6F6;
+$background-menu-restaurants-location: #EAEAEA;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+   
+h1{
+    font-family: 'Shrikhand';
+    font-size: 28px;
+    // padding: 0px 19px 0px 16px;
+    // width: 197px;
+} 
+h2{
+    font-size: 16px;
+    font-family: 'roboto';
+}
+h3{
+    font-size: 18px;
+    font-family: 'roboto';
+}
+p{
+    font-size: 15.043px;
+    font-family: 'roboto';
+}
+
+ 
+
+@mixin shadow-button-cards {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border: none;
+}
+
+@mixin footer {
+    padding: 22px 25px;
+    background: #353535;
+    color: #fff;
+    position: absolute;
+    top: 1428px;
+    left: 0;
+    right: 0;
+
+    @media (min-width:768px) {
+        display: flex;
+        justify-content: flex-end;
+        padding: 30px 25px;
+        gap: 7px;
+        align-items: baseline;
+    }
+
+    h3{
+        font-family: 'Shrikhand';
+        margin-bottom: 16px;
+        font-weight: 400;
+        font-size: 19px;
+
+        @media (min-width:768px) {
+            margin: 0;
+            order: 1;
+            // padding-bottom: 7px;
+            bottom: 10%;
+            margin-top: 33px;
+            width: 144px;
+        }
+    }
+
+    p{
+        font-size: 16px;
+    }
+
+    img{
+        margin-right: 11px;
+    }
+
+    .link-contact {
+        text-decoration: none;
+        color: #fff;
+        @media (min-width:768px) {
+            width: 144px;
+        }
+    }
+
+    .link-partners {
+        @media (min-width:768px) {
+            width: 180px;
+        }
+    }
+}
+
+.button {
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    width: 186px;
+    height: 50px;
+    border-radius: 25px;
+    color: #ffff;
+    @include shadow-button-cards;
+    background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 450ms;
+    margin: 28px auto 40px auto;
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    &:not(:hover):after {
+        animation: opacity 450ms;
+    }
+
+    @media (min-width:768px) {
+        margin-bottom: 30px;
+    }
+}
+
+//    header
+
+header{
+   display: flex;
+   flex-direction:row;
+   justify-content:space-evenly;
+    padding: 14px 89px 13px 17px;
+    gap: 42px;
+    height: 63px;
+   .fa-arrow-left{
+    width: 30px;
+    height: 30px;
+   justify-content: center;
+    align-items: center;
+
+   }
+}  
+
+// section image
+
+.images{
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    position: relative;
+}
+
+// menu
+.cards-main{
+    width: 100%;
+    height: 1145px;
+    margin-top: -60px;
+    position: absolute;
+    z-index: 1;
+    background-color: $blanc-gris;
+    border-radius: 40px 40px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    h1{
+        margin: 32px 0 0 17px ;
+        width: 340px;
+    }
+    h2{
+        display: flex;
+        flex-direction: row;
+        margin: 40px 0 0 12px;
+    }
+   .fa-regular,
+   .fa-solid {
+       right: 20px;
+       margin-top: 5px;
+       position: absolute;
+       top: 40px;
+       right: 12px;
+    }
+    .fa-solid {
+        opacity: 0;
+        transition: opacity 500ms;
+        &:hover {
+            opacity: 1;
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+        }
+    
+        &:not(:hover):after {
+            animation: opacity 300ms linear infinite;
+            animation-fill-mode: forwards;
+        }
+    }        
+    .cards{
+        width: 100%;
+        height: 69px;
+        border-radius: 15.043px;
+        background-color: #ffff;
+        @include shadow-button-cards;
+        display: flex;
+        flex-direction:column;
+        .prix{
+            // position: absolute;
+            display: flex;
+            flex-direction: row;
+            float: right;
+        }
+    }
+}
+
+
+
+
+
+   // footer
+
+footer {
+    @include footer  
+}
+       
+
+
+
+
+
+
+
