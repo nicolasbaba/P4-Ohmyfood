@@ -47,7 +47,6 @@ p{
     top: 1428px;
     left: 0;
     right: 0;
-
     @media (min-width:768px) {
         display: flex;
         justify-content: flex-end;
@@ -65,7 +64,6 @@ p{
         @media (min-width:768px) {
             margin: 0;
             order: 1;
-            // padding-bottom: 7px;
             bottom: 10%;
             margin-top: 33px;
             width: 144px;
@@ -131,9 +129,9 @@ header{
     flex-direction:row;
     height: 63px;
    .fa-arrow-left{
-    width: 30px;
-    height: 30px;
-    margin: 17px 0 16px 17px;
+    font-size: 1.40em;
+    color: black;
+    margin: 20px 0 16px 17px;
    }
    h1{
     margin: auto;
@@ -152,6 +150,8 @@ header{
 }
 
 // menu
+main{
+
 .cards-main{
     width: 100%;
     height: 1145px;
@@ -162,9 +162,20 @@ header{
     display: flex;
     flex-direction: column;
     gap: 12px;
+    @media (min-width:768px){
+        width: 77%;
+        margin-left: auto;
+            margin-right: auto;
+       margin-left: 192px;
+       margin-right: 192px;
+    }
    
     h1{
         margin: 32px 0 0 17px ;
+        @media (min-width:768px){
+          display:flex ;
+          justify-content: space-around;
+        }
     }
     h2{
         display: flex;
@@ -174,14 +185,18 @@ header{
         height: 30px;
         width: 40px;
         border-color: $border-h2;
+        @media (min-width:768px){
+            margin-left:210px ;
+        }
     }
    .fa-regular,
    .fa-solid {
-       right: 20px;
-       margin-top: 5px;
-       position: absolute;
-       top: 40px;
-       right: 12px;
+        right: 20px;
+        margin-top: 5px;
+        position: absolute;
+        top: 40px;
+        right: 12px;
+        font-size: 1.15em;
     }
     .fa-solid {
         opacity: 0;
@@ -206,6 +221,12 @@ header{
         display: flex;
         flex-direction:column;
         margin: 0 12px 0 12px;
+        @media (min-width:768px){
+            margin: 0 210px 0 211px;
+        }
+        @media (min-width:1200px){
+            margin: 0 110px 0 111px;
+        }
     
         h3 {
             height: 21px;
@@ -235,13 +256,11 @@ header{
         }
     }
         
+   }
+
 }
 
-
-
-
-
-   // footer
+// footer
 
 footer {
     @include footer  

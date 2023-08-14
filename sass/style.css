@@ -353,11 +353,12 @@ header input::placeholder {
   float: right;
   right: 20px;
   margin-top: 5px;
+  font-size: 1.15em;
   position: absolute;
 }
 @media (min-width: 768px) {
   .section-restaurant .fa-regular, .section-restaurant .fa-solid {
-    margin-right: 20px;
+    margin-right: 85px;
     right: 425px;
     transform: translateX(2700%);
   }

@@ -67,7 +67,6 @@ p {
         @media (min-width:768px){
             margin: 0;
             order: 1;
-            // padding-bottom: 7px;
             bottom: 10%;
             margin-top: 33px;
             width: 144px;
@@ -129,7 +128,6 @@ p {
         transform: translate(-50%, -50%);
         background: -webkit-linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
         background-clip: text;
-        // -webkit-background-clip: text;
         color: transparent;
     }
 }   
@@ -264,8 +262,6 @@ header{
 
 .functioning{
     width: 100%;
-    // width: 322.486px;
-    // height: 72.379px;
     display: flex;
     flex-direction: column;
   
@@ -343,7 +339,6 @@ header{
                 padding: 0;
                 display: flex;
                 flex-direction: column;
-                // justify-content: first baseline;
             }
     }
     .cards{
@@ -355,7 +350,6 @@ header{
         margin-top: 18px;
         @media (min-width:768px) {
                 margin: 0;
-                // width: 470px;
                 width: 46%;
             }  
     }
@@ -365,7 +359,6 @@ header{
         height: 231px;
         object-fit: cover;
         @media (min-width:768px) {
-                // width:470px;
                 width: 100%;
             }
     }
@@ -405,11 +398,11 @@ header{
         float: right;
         right: 20px;
         margin-top: 5px;
-        // margin-right: 20px;
+        font-size: 1.15em;
         position: absolute; 
         @media (min-width:768px) {
                 // left:300px;
-                margin-right: 20px;
+                margin-right: 85px;
                 right: 425px;
                 transform: translateX(2700%);
             }
