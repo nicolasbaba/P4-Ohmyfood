@@ -122,6 +122,41 @@ p{
     }
 }
 
+// animation
+
+.entrance,
+.dishes,
+.dessert {
+    opacity: 0;
+}
+
+.entrance {
+    animation: appear 1s linear forwards;
+   
+}
+
+.dishes{
+    animation: appear 2s linear forwards;
+    
+}
+
+.dessert{
+    animation: appear 3s linear forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
 //    header
 
 header{
@@ -165,11 +200,11 @@ main{
     @media (min-width:768px){
         width: 77%;
         margin-left: auto;
-            margin-right: auto;
-       margin-left: 192px;
-       margin-right: 192px;
+        margin-right: auto;
+        margin-left: 192px;
+        margin-right: 192px;
     }
-   
+    }
     h1{
         margin: 32px 0 0 17px ;
         @media (min-width:768px){
@@ -187,6 +222,9 @@ main{
         border-color: $border-h2;
         @media (min-width:768px){
             margin-left:210px ;
+        }
+        @media (min-width:1200px) {
+            margin: 0 110px 0 111px;
         }
     }
    .fa-regular,
@@ -212,7 +250,8 @@ main{
             animation: opacity 300ms linear infinite;
             animation-fill-mode: forwards;
         }
-    }        
+       
+    }   
     .cards{
         height: 69px;
         border-radius: 15.043px;
@@ -223,11 +262,13 @@ main{
         margin: 0 12px 0 12px;
         @media (min-width:768px){
             margin: 0 210px 0 211px;
+            // margin-left: 210px;
         }
         @media (min-width:1200px){
             margin: 0 110px 0 111px;
-        }
-    
+            // margin-left:  110px ;
+            // margin-right: 0;
+        } 
         h3 {
             height: 21px;
             overflow: hidden;
@@ -252,13 +293,13 @@ main{
             display: flex;
             flex-direction: row;
            justify-content: space-between;
-          
         }
+      
     }
         
-   }
-
 }
+
+
 
 // footer
 

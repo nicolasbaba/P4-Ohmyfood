@@ -55,6 +55,35 @@ p {
   }
 }
 
+.entrance,
+.dishes,
+.dessert {
+  opacity: 0;
+}
+
+.entrance {
+  animation: appear 1s linear forwards;
+}
+
+.dishes {
+  animation: appear 2s linear forwards;
+}
+
+.dessert {
+  animation: appear 3s linear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 header {
   display: flex;
   flex-direction: row;
@@ -99,16 +128,16 @@ main .cards-main {
     margin-right: 192px;
   }
 }
-main .cards-main h1 {
+main h1 {
   margin: 32px 0 0 17px;
 }
 @media (min-width: 768px) {
-  main .cards-main h1 {
+  main h1 {
     display: flex;
     justify-content: space-around;
   }
 }
-main .cards-main h2 {
+main h2 {
   display: flex;
   flex-direction: row;
   margin: 40px 0 0 12px;
@@ -118,12 +147,17 @@ main .cards-main h2 {
   border-color: #99E2D0;
 }
 @media (min-width: 768px) {
-  main .cards-main h2 {
+  main h2 {
     margin-left: 210px;
   }
 }
-main .cards-main .fa-regular,
-main .cards-main .fa-solid {
+@media (min-width: 1200px) {
+  main h2 {
+    margin: 0 110px 0 111px;
+  }
+}
+main .fa-regular,
+main .fa-solid {
   right: 20px;
   margin-top: 5px;
   position: absolute;
@@ -131,22 +165,22 @@ main .cards-main .fa-solid {
   right: 12px;
   font-size: 1.15em;
 }
-main .cards-main .fa-solid {
+main .fa-solid {
   opacity: 0;
   transition: opacity 500ms;
 }
-main .cards-main .fa-solid:hover {
+main .fa-solid:hover {
   opacity: 1;
   color: transparent;
   -webkit-background-clip: text;
           background-clip: text;
   background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
 }
-main .cards-main .fa-solid:not(:hover):after {
+main .fa-solid:not(:hover):after {
   animation: opacity 300ms linear infinite;
   animation-fill-mode: forwards;
 }
-main .cards-main .cards {
+main .cards {
   height: 69px;
   border-radius: 15.043px;
   background-color: white;
@@ -157,36 +191,36 @@ main .cards-main .cards {
   margin: 0 12px 0 12px;
 }
 @media (min-width: 768px) {
-  main .cards-main .cards {
+  main .cards {
     margin: 0 210px 0 211px;
   }
 }
 @media (min-width: 1200px) {
-  main .cards-main .cards {
+  main .cards {
     margin: 0 110px 0 111px;
   }
 }
-main .cards-main .cards h3 {
+main .cards h3 {
   height: 21px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 15px 15px 0px 15px;
 }
-main .cards-main .cards p {
+main .cards p {
   height: 19px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-left: 15px;
 }
-main .cards-main .cards .price {
+main .cards .price {
   float: right;
   font-weight: bold;
   overflow: visible;
   margin-right: 16px;
 }
-main .cards-main .cards .product-price {
+main .cards .product-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
