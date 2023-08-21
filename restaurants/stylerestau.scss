@@ -220,11 +220,11 @@ main{
         height: 30px;
         width: 40px;
         border-color: $border-h2;
-        @media (min-width:768px){
-            margin-left:210px ;
+        @media (min-width:768px){        
+            margin: 0 110px 0 111px;
         }
         @media (min-width:1200px) {
-            margin: 0 110px 0 111px;
+            margin-left:210px ;
         }
     }
    .fa-regular,
@@ -261,23 +261,18 @@ main{
         flex-direction:column;
         margin: 0 12px 0 12px;
         @media (min-width:768px){
-            margin: 0 210px 0 211px;
-            // margin-left: 210px;
+            margin: 0 110px 0 111px;
         }
         @media (min-width:1200px){
-            margin: 0 110px 0 111px;
-            // margin-left:  110px ;
-            // margin-right: 0;
+            margin: 0 210px 0 211px;
         } 
         h3 {
-            height: 21px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
             margin: 15px 15px 0px 15px;
         }
         p {
-            height: 19px;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;

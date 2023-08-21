@@ -61,15 +61,14 @@ p {
         }
     h3 {
         font-family: 'Shrikhand';
-        margin-bottom:16px ;
         font-weight: 400; 
         font-size: 19px;
         @media (min-width:768px){
             margin: 0;
             order: 1;
-            bottom: 10%;
             margin-top: 33px;
             width: 144px;
+
         }
     }
     p {
@@ -373,20 +372,14 @@ header{
         position:absolute;
         padding: 5px 10px;
         right: 30px;
-        margin-top: 15px;
+        top: 15px;
         color: $cyan-strong;
         font-size: 14px;
-        @media (min-width:768px) {
-                right: 385px;
-                transform: translateX(500%);
-            }
     }   
     h3{
-        width: 267px;  
         margin:16px 0 5px 13px;
     }
     p{
-        width: 267px;
         margin: 0 0 12px 13px;
         font-size: 17px;
     }
@@ -395,17 +388,9 @@ header{
         color: black;
     }
     .fa-regular,.fa-solid{
-        float: right;
         right: 20px;
-        margin-top: 5px;
         font-size: 1.15em;
         position: absolute; 
-        @media (min-width:768px) {
-                // left:300px;
-                margin-right: 85px;
-                right: 425px;
-                transform: translateX(2700%);
-            }
     }
     .fa-solid {
         opacity: 0;

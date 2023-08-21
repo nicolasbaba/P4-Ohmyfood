@@ -326,22 +326,14 @@ header input::placeholder {
   position: absolute;
   padding: 5px 10px;
   right: 30px;
-  margin-top: 15px;
+  top: 15px;
   color: #008766;
   font-size: 14px;
 }
-@media (min-width: 768px) {
-  .section-restaurant .new-badge {
-    right: 385px;
-    transform: translateX(500%);
-  }
-}
 .section-restaurant h3 {
-  width: 267px;
   margin: 16px 0 5px 13px;
 }
 .section-restaurant p {
-  width: 267px;
   margin: 0 0 12px 13px;
   font-size: 17px;
 }
@@ -350,18 +342,9 @@ header input::placeholder {
   color: black;
 }
 .section-restaurant .fa-regular, .section-restaurant .fa-solid {
-  float: right;
   right: 20px;
-  margin-top: 5px;
   font-size: 1.15em;
   position: absolute;
-}
-@media (min-width: 768px) {
-  .section-restaurant .fa-regular, .section-restaurant .fa-solid {
-    margin-right: 85px;
-    right: 425px;
-    transform: translateX(2700%);
-  }
 }
 .section-restaurant .fa-solid {
   opacity: 0;
@@ -395,7 +378,6 @@ footer {
 }
 footer h3 {
   font-family: "Shrikhand";
-  margin-bottom: 16px;
   font-weight: 400;
   font-size: 19px;
 }
@@ -403,7 +385,6 @@ footer h3 {
   footer h3 {
     margin: 0;
     order: 1;
-    bottom: 10%;
     margin-top: 33px;
     width: 144px;
   }
