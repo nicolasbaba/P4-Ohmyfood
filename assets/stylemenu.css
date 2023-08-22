@@ -27,6 +27,71 @@
     opacity: 1;
   }
 }
+.footer {
+  padding: 22px 25px;
+  background: #353535;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 30px 25px;
+    gap: 7px;
+    align-items: baseline;
+  }
+}
+.footer h3 {
+  font-family: "Shrikhand";
+  font-weight: 400;
+  font-size: 19px;
+}
+@media (min-width: 768px) {
+  .footer h3 {
+    margin: 0;
+    order: 1;
+    margin-top: 33px;
+    width: 144px;
+  }
+}
+.footer p {
+  font-size: 16px;
+}
+.footer img {
+  margin-right: 11px;
+}
+.footer .link-contact {
+  text-decoration: none;
+  color: #fff;
+}
+@media (min-width: 768px) {
+  .footer .link-contact {
+    width: 144px;
+  }
+}
+@media (min-width: 768px) {
+  .footer .link-partners {
+    width: 180px;
+  }
+}
+
+.footer-menu {
+  position: absolute;
+  top: 1428px;
+  left: 0;
+  right: 0;
+}
+
+h3 {
+  font-family: "Shrikhand";
+  margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  h3 {
+    bottom: 10%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -221,58 +286,4 @@ main .cards-menu .product-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-footer {
-  padding: 22px 25px;
-  background: #353535;
-  color: #fff;
-  position: absolute;
-  top: 1428px;
-  left: 0;
-  right: 0;
-}
-@media (min-width: 768px) {
-  footer {
-    display: flex;
-    justify-content: flex-end;
-    padding: 30px 25px;
-    gap: 7px;
-    align-items: baseline;
-  }
-}
-footer h3 {
-  font-family: "Shrikhand";
-  margin-bottom: 16px;
-  font-weight: 400;
-  font-size: 19px;
-}
-@media (min-width: 768px) {
-  footer h3 {
-    margin: 0;
-    order: 1;
-    bottom: 10%;
-    margin-top: 33px;
-    width: 144px;
-  }
-}
-footer p {
-  font-size: 16px;
-}
-footer img {
-  margin-right: 11px;
-}
-footer .link-contact {
-  text-decoration: none;
-  color: #fff;
-}
-@media (min-width: 768px) {
-  footer .link-contact {
-    width: 144px;
-  }
-}
-@media (min-width: 768px) {
-  footer .link-partners {
-    width: 180px;
-  }
 }

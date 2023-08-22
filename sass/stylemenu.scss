@@ -1,6 +1,10 @@
 @import'./variables';
 @import'./mixin';
 @import'./animation-menu';
+@import'./footer';
+
+
+// general
 
 * {
     margin: 0;
@@ -30,7 +34,6 @@ p {
 }
 
 .button {
-    // align-items: center;
     text-decoration: none;
     text-align: center;
     padding: 15px;
@@ -218,6 +221,6 @@ main {
 
 // footer
 
-footer {
-    @include footer
-}
+// footer {
+//     @include footer
+// }
