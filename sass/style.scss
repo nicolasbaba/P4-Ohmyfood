@@ -1,12 +1,9 @@
 // general
 
-$cyan-soft : #99E2D0 ;
-$cyan-strong:#008766;
-$bleu-soft:#89C8FA;
-$bleu-deep:#003A68;
-$purple-soft:#9356DC;
-$blanc-gris:#F6F6F6;
-$background-menu-restaurants-location:#EAEAEA;
+
+@import'./variables';
+@import'./mixin';
+@import'./loader';
 
 * {
     margin: 0;
@@ -25,7 +22,7 @@ h1 {
 h2 {
     font-size: 24px;
     font-weight: 700;
-   
+
 }
 
 h3 {
@@ -39,238 +36,140 @@ p {
 }
 
 
-@mixin h1-accueil{
-    font-family:'Shrikhand';
-    font-size: 30px;
-    font-weight: 400;
-    height: 70px;
-    text-align: center;
-    padding:14px 89px 13px 89px ;
-}
-
-@mixin footer {
-    padding: 22px 25px;
-    background: #353535;
-    color: #fff;
-    @media (min-width:768px) {
-            display: flex;
-            justify-content: flex-end;  
-            padding: 30px 25px;
-            gap: 7px;
-            align-items: baseline;
-        }
-    h3 {
-        font-family: 'Shrikhand';
-        font-weight: 400; 
-        font-size: 19px;
-        @media (min-width:768px){
-            margin: 0;
-            order: 1;
-            margin-top: 33px;
-            width: 144px;
-
-        }
-    }
-    p {
-        font-size: 16px;
-    }
-    img {
-        margin-right: 11px;
-    }
-    .link-contact{ 
-        text-decoration: none;
-        color: #fff;
-        @media (min-width:768px){
-            width: 144px;
-        }
-    }
-    .link-partners{
-        @media (min-width:768px) {
-                width: 180px;
-            }
-    }
-}
-
-@mixin shadow-button-cards{
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    border: none;
-}
-
-// loader
-
-
-.loader {
-    position:fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    & .spinner {
-         width: 150px;
-         height: 150px;
-         border: 5px solid #000;
-         border-top-color: #9356DC;
-         border-radius: 50%;
-         animation: spin 2s linear infinite;
-    }
-    & .text {
-        font-family: 'Shrikhand';
-        font-size: 20px;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: -webkit-linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-        background-clip: text;
-        color: transparent;
-    }
-}   
-    @keyframes spin {
-        0% {
-            transform: rotate(0deg);
-        }
-    
-        100% {
-            transform: rotate(360deg);
-        }
-    }
-    
-        .loader {
-            animation: hide 3s;
-            animation-fill-mode: forwards;
-        }
-    
-        @keyframes hide {
-        0% {
-            opacity: 1;
-        }
-    
-        100% {
-            opacity: 0;
-        }
-}
-
 // header
-header{
+header {
     display: flex;
     flex-direction: column;
-    align-items: center;  
-    h1{
+    align-items: center;
+
+    h1 {
         width: 100%;
         height: 63px;
         @include h1-accueil;
+
         @media (min-width:768px) {
-                font-size: 40px;
-            }
+            font-size: 40px;
+        }
     }
-    h2{
-        @media (min-width:768px){
-                font-size: 40px;
-            }
+
+    h2 {
+        @media (min-width:768px) {
+            font-size: 40px;
+        }
     }
-    .location{
+
+    .location {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 50px;
-        background-color:$background-menu-restaurants-location ;
-        gap:17px ;
+        background-color: $background-menu-restaurants-location ;
+        gap: 17px;
     }
-    input{
+
+    input {
         border: none;
-        background-color:$background-menu-restaurants-location ;
-        font-size:16px; 
-        font-weight: bold; 
+        background-color: $background-menu-restaurants-location ;
+        font-size: 16px;
+        font-weight: bold;
         width: 120px;
         color: black;
+
         &::placeholder {
-                color: black;        
-             }
+            color: black;
+        }
     }
-  
+
 }
 
 //   reservation
 
-.resa{
+.resa {
     width: 100%;
     height: 287.5px;
     display: flex;
     flex-direction: column;
-    background-color:$blanc-gris;
+    background-color: $blanc-gris;
     align-items: center;
-    @media (min-width:768px){
-        height:215px ;
-    
+
+    @media (min-width:768px) {
+        height: 215px;
+
     }
-    h2{
+
+    h2 {
         padding: 39px 58px 0px 42px;
         padding-top: 39px;
         display: flex;
-        justify-content:space-evenly;
+        justify-content: space-evenly;
         text-align: center;
+
         @media (min-width:768px) {
-                font-size: 40px;
-                padding: 0 0 18px 0;
-                    margin-top: 30px;
-            }
+            font-size: 40px;
+            padding: 0 0 18px 0;
+            margin-top: 30px;
+        }
     }
-    p{
-        padding:0 26px 27px 34px ;  
+
+    p {
+        padding: 0 26px 27px 34px;
         display: flex;
         justify-content: space-evenly;
         text-align: center;
+
         @media (min-width:768px) {
-                padding-bottom: 18px;
+            padding-bottom: 18px;
         }
     }
-    .button{
+
+    .button {
         text-decoration: none;
         text-align: center;
         padding: 15px;
         width: 218px;
         height: 50px;
         border-radius: 25px;
-        color: #ffff;       
+        color: #ffff;
         @include shadow-button-cards;
-        background:linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+        background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
         font-weight: bold;
         opacity: 1;
         transition: opacity 450ms;
+
         &:hover {
-                opacity: 0.8;
-                box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+            opacity: 0.8;
+            box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
         }
-        &:not(:hover):after{
-            animation: opacity 450ms ;
+
+        &:not(:hover):after {
+            animation: opacity 450ms;
         }
+
         @media (min-width:768px) {
             margin-bottom: 30px;
         }
     }
-    
+
 }
+
 // fonctionement
 
-.functioning{
+.functioning {
     width: 100%;
     display: flex;
     flex-direction: column;
-  
+
     h2 {
         padding: 48px 80px 0px 20px;
+
         @media (min-width:768px) {
             padding: 50px 0 0 180px;
         }
     }
-    p{
+
+    p {
         display: flex;
         justify-content: space-evenly;
         padding-top: 4px;
@@ -281,23 +180,27 @@ header{
         font-size: 14.182px;
         margin-left: -12.5px;
         color: #ffff;
-      
+
     }
-    ul{
-        margin: 26px 20px 68px 33px; 
+
+    ul {
+        margin: 26px 20px 68px 33px;
+
         @media (min-width:768px) {
             display: flex;
             flex-direction: row;
-            gap:36.51px;
+            gap: 36.51px;
             padding: 25px 180px 50px 180px;
-            margin:0 ;
-           @media (max-width:1200px){
-            padding: 25px 90px 50px 90px;
-           } 
+            margin: 0;
+
+            @media (max-width:1200px) {
+                padding: 25px 90px 50px 90px;
+            }
 
         }
     }
-    li{
+
+    li {
         width: 100%;
         height: 72.379px;
         list-style: none;
@@ -310,103 +213,122 @@ header{
         font-weight: bold;
         gap: 20px;
         margin-bottom: 25px;
-        @media (min-width:768px){
+
+        @media (min-width:768px) {
             margin-bottom: 0;
         }
     }
-   
+
 }
 
 // restaurant
 
-.section-restaurant{
-    padding: 0 18px 66px 17px ;
+.section-restaurant {
+    padding: 0 18px 66px 17px;
+
     @media (min-width:768px) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 0 180px 30px 180px;
-            gap: 28px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 180px 30px 180px;
+        gap: 28px;
+
         @media (max-width:1200px) {
-                    padding: 25px 90px 50px 90px;
+            padding: 25px 90px 50px 90px;
         }
-        }
+    }
+
     h2 {
         padding: 48px 80px 0px 3px;
+
         @media (min-width:768px) {
-                width: 100%;
-                padding: 0;
-                display: flex;
-                flex-direction: column;
-            }
+            width: 100%;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+        }
     }
-    .cards{
+
+    .cards {
         height: 300px;
         position: relative;
         width: 100%;
         @include shadow-button-cards;
         border-radius: 15px;
         margin-top: 18px;
+
         @media (min-width:768px) {
-                margin: 0;
-                width: 46%;
-            }  
+            margin: 0;
+            width: 46%;
+        }
     }
-    .cards img{
-        border-radius:15px 15px 0 0;
+
+    .cards img {
+        border-radius: 15px 15px 0 0;
         width: 100%;
         height: 231px;
         object-fit: cover;
+
         @media (min-width:768px) {
-                width: 100%;
-            }
+            width: 100%;
+        }
     }
+
     .card-texte {
-        border-radius:0 0 15px 15px ;
+        border-radius: 0 0 15px 15px;
         height: 60px;
         margin-top: -3px;
     }
+
     .new-badge {
         border-radius: 2px;
         background-color: $cyan-soft;
-        position:absolute;
+        position: absolute;
         padding: 5px 10px;
         right: 30px;
         top: 15px;
         color: $cyan-strong;
         font-size: 14px;
-    }   
-    h3{
-        margin:16px 0 5px 13px;
     }
-    p{
+
+    h3 {
+        margin: 16px 0 5px 13px;
+    }
+
+    p {
         margin: 0 0 12px 13px;
         font-size: 17px;
     }
+
     a {
         text-decoration: none;
         color: black;
     }
-    .fa-regular,.fa-solid{
+
+    .fa-regular,
+    .fa-solid {
         right: 20px;
         font-size: 1.15em;
-        position: absolute; 
+        position: absolute;
     }
+
     .fa-solid {
         opacity: 0;
-        transition: opacity 500ms  ;
+        transition: opacity 500ms;
+
         &:hover {
             opacity: 1;
             color: transparent;
             background-clip: text;
             background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
         }
+
         &:not(:hover):after {
             animation: opacity 300ms linear infinite;
             animation-fill-mode: forwards;
         }
     }
-        
+
 }
 
 
@@ -415,7 +337,3 @@ header{
 footer {
     @include footer
 }
-
-
-
-

@@ -1,0 +1,35 @@
+// animation cards menu
+
+.entrance,
+.dishes,
+.dessert {
+    opacity: 0;
+}
+
+.entrance {
+    animation: appear 1s linear forwards;
+
+}
+
+.dishes {
+    animation: appear 2s linear forwards;
+
+}
+
+.dessert {
+    animation: appear 3s linear forwards;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
