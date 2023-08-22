@@ -1,7 +1,9 @@
 @import'./variables';
 @import'./mixin';
 @import'./animation-menu';
+@import'./header';
 @import'./footer';
+@import'./button';
 
 
 // general
@@ -33,54 +35,36 @@ p {
     font-family: 'roboto';
 }
 
-.button {
-    text-decoration: none;
-    text-align: center;
-    padding: 15px;
-    width: 186px;
-    height: 50px;
-    border-radius: 25px;
-    color: #ffff;
-    @include shadow-button-cards;
-    background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-    font-weight: bold;
-    opacity: 1;
-    transition: opacity 450ms;
-    margin: 28px auto 40px auto;
+// reservatio
 
-    &:hover {
-        opacity: 0.8;
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
-    }
+// .button {
+//     text-decoration: none;
+//     text-align: center;
+//     padding: 15px;
+//     width: 186px;
+//     height: 50px;
+//     border-radius: 25px;
+//     color: #ffff;
+//     @include shadow-button-cards;
+//     background: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+//     font-weight: bold;
+//     opacity: 1;
+//     transition: opacity 450ms;
+//     margin: 28px auto 40px auto;
 
-    &:not(:hover):after {
-        animation: opacity 450ms;
-    }
+//     &:hover {
+//         opacity: 0.8;
+//         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.35);
+//     }
 
-    @media (min-width:768px) {
-        margin-bottom: 30px;
-    }
-}
+//     &:not(:hover):after {
+//         animation: opacity 450ms;
+//     }
 
-// header
-
-header {
-    display: flex;
-    flex-direction: row;
-    height: 63px;
-
-    .fa-arrow-left {
-        font-size: 1.40em;
-        color: black;
-        margin: 20px 0 16px 17px;
-    }
-
-    h1 {
-        margin: auto;
-        width: 197px;
-        padding: 0 19px 0 19px;
-    }
-}
+//     @media (min-width:768px) {
+//         margin-bottom: 30px;
+//     }
+// }
 
 // section image
 
@@ -216,11 +200,3 @@ main {
     }
 
 }
-
-
-
-// footer
-
-// footer {
-//     @include footer
-// }
