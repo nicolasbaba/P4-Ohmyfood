@@ -118,6 +118,7 @@
   margin: auto;
   width: 197px;
   padding: 0 19px 0 19px;
+  font-family: "Shrikhand";
 }
 
 .footer {
@@ -241,6 +242,29 @@
     opacity: 1;
   }
 }
+.fa-regular,
+.heart {
+  right: 20px;
+  font-size: 1.15em;
+  position: absolute;
+}
+
+.heart {
+  opacity: 0;
+  transition: opacity 500ms;
+  color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
+}
+.heart:hover {
+  opacity: 1;
+}
+.heart:not(:hover):after {
+  animation: opacity 500ms linear infinite;
+  animation-fill-mode: forwards;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -435,27 +459,6 @@
   text-decoration: none;
   color: black;
 }
-.section-restaurant .fa-regular,
-.section-restaurant .fa-solid {
-  right: 20px;
-  font-size: 1.15em;
-  position: absolute;
-}
-.section-restaurant .fa-solid {
-  opacity: 0;
-  transition: opacity 500ms;
-  color: transparent;
-  -webkit-background-clip: text;
-          background-clip: text;
-  background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-}
-.section-restaurant .fa-solid:hover {
-  opacity: 1;
-}
-.section-restaurant .fa-solid:not(:hover):after {
-  animation: opacity 500ms linear infinite;
-  animation-fill-mode: forwards;
-}
 
 .images {
   width: 100%;
@@ -484,6 +487,11 @@ main .cards-main {
     margin-left: 192px;
     margin-right: 192px;
   }
+}
+main .cards-main .fa-regular,
+main .cards-main .fa-solid {
+  top: 30px;
+  right: 40px;
 }
 main h1 {
   margin: 32px 0 40px 17px;

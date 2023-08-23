@@ -6,6 +6,8 @@
 @import'./footer';
 @import'./button';
 @import'./animation-menu';
+@import'./heart-animation';
+
 
 // general
 
@@ -213,33 +215,7 @@
         color: black;
     }
 
-    .fa-regular,
-    .fa-solid {
-        right: 20px;
-        font-size: 1.15em;
-        position: absolute;
-    }
-
-    .fa-solid {
-        opacity: 0;
-        transition: opacity 500ms;
-        color: transparent;
-        background-clip: text;
-        background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
-
-        &:hover {
-            opacity: 1;
-        }
-
-        &:not(:hover):after {
-            animation: opacity 500ms linear infinite;
-            animation-fill-mode: forwards;
-        }
-    }
-
 }
-
-
 
 
 // page restaurants /////////////
@@ -254,7 +230,7 @@
 
 // menu
 main {
-
+   
     .cards-main {
         width: 100%;
         margin-top: -60px;
@@ -272,6 +248,11 @@ main {
             margin-left: 192px;
             margin-right: 192px;
         }
+        .fa-regular,
+        .fa-solid {
+            top: 30px;
+            right: 40px;  
+        }
     }           
 
     h1 {
@@ -284,14 +265,6 @@ main {
             display: flex;
             justify-content: space-around;
         }
-        // .fa-regular,
-        // .fa-solid {
-        //     right: 41px;
-        //     margin-top: 5px;
-        //     position: absolute;
-        //     top: 40px;
-        //     font-size: 1.15em;
-        // }
     }
 
     .titre {
