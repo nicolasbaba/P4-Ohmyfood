@@ -46,20 +46,17 @@
 .loader {
     animation: hide 8s ;
     animation-fill-mode: forwards;
-   
-
+    // transform: translateX(-9999px);
 }
 
 @keyframes hide {
     0% {
         opacity: 1;
     }
-    // 50%{
-    //     opacity: 0.5;
-    // }
+    
     100% {
         opacity: 0;
-    transform: translateX(-9999px);
+        transform: translateX(-9999px);
     }
 }
 
