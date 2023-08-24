@@ -7,17 +7,17 @@
 }
 
 .entrance {
-    animation: appear 1s linear forwards;
-
+    animation: appear 2s linear forwards;
 }
 
 .dishes {
     animation: appear 2s linear forwards;
-
+    animation-delay: 1s;
 }
 
 .dessert {
-    animation: appear 3s linear forwards;
+    animation: appear 2s linear forwards;
+    animation-delay: 2s;
 }
 
 @keyframes appear {

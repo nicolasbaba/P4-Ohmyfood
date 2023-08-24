@@ -7,7 +7,7 @@
 @import'./button';
 @import'./animation-menu';
 @import'./heart-animation';
-
+@import'./cards-animations';
 
 // general
 
@@ -218,7 +218,7 @@
 }
 
 
-// page restaurants /////////////
+// page restaurants menu /////////////
 
 .images {
     width: 100%;
@@ -230,7 +230,6 @@
 
 // menu
 main {
-   
     .cards-main {
         width: 100%;
         margin-top: -60px;
@@ -245,14 +244,31 @@ main {
             width: 77%;
             margin-left: auto;
             margin-right: auto;
-            margin-left: 192px;
-            margin-right: 192px;
         }
         .fa-regular,
         .fa-solid {
-            top: 30px;
-            right: 40px;  
+            top: 44px;
+            right: 290px; 
         }
+
+        // .cards-animation {
+        //     right: 150px;
+        //     border-radius: 0 15.043px 15.043px 0;
+        //     background-color: $border-h2;
+        //     width: 63px;
+        //     height: 69px;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
+        // }
+        // .fa-circle-check {
+        //     font-size: 1.25em;
+        //     color: white;
+        // }
+        // .containers-cards-animation{
+        //     display: flex;
+        //         flex-direction: row;
+        // }
     }           
 
     h1 {
@@ -284,10 +300,14 @@ main {
         @media (min-width:1200px) {
             margin-left: 210px;
         }
-    }
+
+   
 }
 
  .cards-menu {
+
+    position: relative;
+    overflow: hidden;
      height: 69px;
      border-radius: 15.043px;
      background-color: #ffff;
@@ -321,7 +341,6 @@ main {
      }
 
      .price {
-         float: right;
          font-weight: bold;
          overflow: visible;
          margin-right: 16px;
@@ -332,7 +351,21 @@ main {
          flex-direction: row;
          justify-content: space-between;
      }
-
+    
  }
-
- 
+    // .cards-animation {
+    //     right: 150px;
+    //     position: absolute;
+    //     border-radius: 0 15.043px 15.043px 0;
+    //     background-color: $border-h2;
+    //     width: 63px;
+    //     height: 69px;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    // }
+    // .fa-circle-check{
+    //     font-size: 1.25em;
+    //     color: white;
+    // }
+}

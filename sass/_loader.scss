@@ -44,19 +44,34 @@
 }
 
 .loader {
-    animation: hide 8s ;
-    animation-fill-mode: forwards;
-    // transform: translateX(-9999px);
+    animation: hide 4s forwards, move 3s 3s forwards;
 }
 
 @keyframes hide {
     0% {
         opacity: 1;
+        transform: translateX(0);
     }
-    
+
     100% {
         opacity: 0;
-        transform: translateX(-9999px);
+        transform: translateX(0);
     }
 }
+
+@keyframes move {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(+100% + 10px));
+    }
+}
+
+
+
+
+
+
 

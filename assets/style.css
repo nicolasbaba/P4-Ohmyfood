@@ -41,17 +41,25 @@
   }
 }
 .loader {
-  animation: hide 8s;
-  animation-fill-mode: forwards;
+  animation: hide 4s forwards, move 3s 3s forwards;
 }
 
 @keyframes hide {
   0% {
     opacity: 1;
+    transform: translateX(0);
   }
   100% {
     opacity: 0;
-    transform: translateX(-9999px);
+    transform: translateX(0);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(100% + 10px));
   }
 }
 .header-accueil {
@@ -220,15 +228,17 @@
 }
 
 .entrance {
-  animation: appear 1s linear forwards;
+  animation: appear 2s linear forwards;
 }
 
 .dishes {
   animation: appear 2s linear forwards;
+  animation-delay: 1s;
 }
 
 .dessert {
-  animation: appear 3s linear forwards;
+  animation: appear 2s linear forwards;
+  animation-delay: 2s;
 }
 
 @keyframes appear {
@@ -253,8 +263,8 @@
   opacity: 0;
   transition: opacity 500ms;
   color: transparent;
+  background-clip: text;
   -webkit-background-clip: text;
-          background-clip: text;
   background-image: linear-gradient(175deg, #9356DC 0%, #FF79DA 100%);
 }
 .heart:hover {
@@ -263,6 +273,40 @@
 .heart:not(:hover):after {
   animation: opacity 500ms linear infinite;
   animation-fill-mode: forwards;
+}
+
+.cards-animation {
+  z-index: 2;
+  position: absolute;
+  right: -63px;
+  border-radius: 0 15.043px 15.043px 0;
+  background-color: #99E2D0;
+  width: 63px;
+  height: 69px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out, right 500ms ease-in-out;
+}
+
+.fa-circle-check {
+  font-size: 1.25em;
+  color: white;
+}
+
+.containers-cards-animation {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-circle-check {
+  font-size: 1.25em;
+  color: white;
+}
+
+.cards-menu:hover .cards-animation {
+  opacity: 1;
+  right: 0px;
 }
 
 * {
@@ -484,14 +528,12 @@ main .cards-main {
     width: 77%;
     margin-left: auto;
     margin-right: auto;
-    margin-left: 192px;
-    margin-right: 192px;
   }
 }
 main .cards-main .fa-regular,
 main .cards-main .fa-solid {
-  top: 30px;
-  right: 40px;
+  top: 44px;
+  right: 290px;
 }
 main h1 {
   margin: 32px 0 40px 17px;
@@ -525,8 +567,9 @@ main .titre {
     margin-left: 210px;
   }
 }
-
-.cards-menu {
+main .cards-menu {
+  position: relative;
+  overflow: hidden;
   height: 69px;
   border-radius: 15.043px;
   background-color: white;
@@ -537,36 +580,35 @@ main .titre {
   margin: 0 12px 0 12px;
 }
 @media (min-width: 768px) {
-  .cards-menu {
+  main .cards-menu {
     margin: 0 110px 0 111px;
   }
 }
 @media (min-width: 1200px) {
-  .cards-menu {
+  main .cards-menu {
     margin: 0 210px 0 211px;
   }
 }
-.cards-menu h3 {
+main .cards-menu h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 15px 15px 0px 15px;
   font-size: 18px;
 }
-.cards-menu p {
+main .cards-menu p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-left: 15px;
   font-size: 15.043px;
 }
-.cards-menu .price {
-  float: right;
+main .cards-menu .price {
   font-weight: bold;
   overflow: visible;
   margin-right: 16px;
 }
-.cards-menu .product-price {
+main .cards-menu .product-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

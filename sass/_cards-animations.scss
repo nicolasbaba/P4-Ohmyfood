@@ -1,0 +1,34 @@
+
+ .cards-animation {
+    z-index: 2;
+    // opacity: 0;
+    position: absolute;
+     right: -63px;
+     border-radius: 0 15.043px 15.043px 0;
+     background-color: $border-h2;
+     width: 63px;
+     height: 69px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+    transition: opacity 0.3s ease-in-out, right 500ms ease-in-out;
+ }
+ .fa-circle-check {
+     font-size: 1.25em;
+     color: white;
+ }
+ .containers-cards-animation{
+    display: flex;
+    flex-direction: row;
+ }
+  .fa-circle-check{
+      font-size: 1.25em;
+      color: white;
+}
+
+.cards-menu:hover .cards-animation{
+    opacity: 1;
+    right: 0px;
+}
+
+
