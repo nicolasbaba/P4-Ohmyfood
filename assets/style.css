@@ -276,7 +276,6 @@
 }
 
 .cards-animation {
-  z-index: 2;
   position: absolute;
   right: -63px;
   border-radius: 0 15.043px 15.043px 0;
@@ -307,6 +306,10 @@
 .cards-menu:hover .cards-animation {
   opacity: 1;
   right: 0px;
+}
+
+.cards-menu:hover .price {
+  transform: translateX(-63px);
 }
 
 * {
@@ -604,6 +607,7 @@ main .cards-menu p {
   font-size: 15.043px;
 }
 main .cards-menu .price {
+  transition: transform 500ms ease-in-out;
   font-weight: bold;
   overflow: visible;
   margin-right: 16px;

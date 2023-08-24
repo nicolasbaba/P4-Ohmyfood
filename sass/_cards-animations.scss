@@ -1,7 +1,6 @@
 
  .cards-animation {
-    z-index: 2;
-    // opacity: 0;
+    // z-index: 2;
     position: absolute;
      right: -63px;
      border-radius: 0 15.043px 15.043px 0;
@@ -30,5 +29,7 @@
     opacity: 1;
     right: 0px;
 }
-
+.cards-menu:hover .price {
+    transform: translateX(-63px);
+}
 

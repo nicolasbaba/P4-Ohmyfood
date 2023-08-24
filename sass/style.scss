@@ -341,6 +341,7 @@ main {
      }
 
      .price {
+        transition: transform 500ms ease-in-out;
          font-weight: bold;
          overflow: visible;
          margin-right: 16px;
