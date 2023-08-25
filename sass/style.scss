@@ -6,6 +6,7 @@
 @import'./footer';
 @import'./button';
 @import'./animation-menu';
+
 @import'./heart-animation';
 @import'./cards-animations';
 
@@ -120,10 +121,16 @@
         font-weight: bold;
         gap: 20px;
         margin-bottom: 25px;
+
+     
         @media (min-width:768px) {
             margin-bottom: 0;
         }
-        
+
+         &:hover .fa-functioning {
+             color: $purple-soft;
+             transition: color 0.3s ease;
+         }
     }
         
 }
@@ -168,6 +175,7 @@
             margin: 0;
             width: 46%;
         }
+       
     }
 
     .cards img {
@@ -245,30 +253,6 @@ main {
             margin-left: auto;
             margin-right: auto;
         }
-        .fa-regular,
-        .fa-solid {
-            top: 44px;
-            right: 290px; 
-        }
-
-        // .cards-animation {
-        //     right: 150px;
-        //     border-radius: 0 15.043px 15.043px 0;
-        //     background-color: $border-h2;
-        //     width: 63px;
-        //     height: 69px;
-        //     display: flex;
-        //     align-items: center;
-        //     justify-content: center;
-        // }
-        // .fa-circle-check {
-        //     font-size: 1.25em;
-        //     color: white;
-        // }
-        // .containers-cards-animation{
-        //     display: flex;
-        //         flex-direction: row;
-        // }
     }           
 
     h1 {
@@ -280,34 +264,44 @@ main {
         @media (min-width:768px) {
             display: flex;
             justify-content: space-around;
+          
         }
+        .fa-regular,
+        .fa-solid {
+            font-size: 1.25rem;
+            top: 12px;
+            z-index: 1;
+        }
+        
+    }
+        
     }
 
-    .titre {
-        display: flex;
-        flex-direction: row;
-        margin: 40px 0 0 12px;
-        border-bottom: 3px solid;
-        height: 30px;
-        width: 40px;
-        border-color: $border-h2;
-        font-size: 16px;
+.titre {
+    display: flex;
+    flex-direction: row;
+     margin: 40px 0 0 12px;
+     border-bottom: 3px solid;
+     height: 30px;
+    width: 40px;
+    border-color: $border-h2;
+    font-size: 16px;
 
-        @media (min-width:768px) {
-            margin: 0 110px 0 111px;
-        }
+    @media (min-width:768px) {
+        margin: 0 110px 0 111px;
+    }
 
-        @media (min-width:1200px) {
-            margin-left: 210px;
-        }
+    @media (min-width:1200px) {
+        margin-left: 210px;
+    }
 
    
 }
 
  .cards-menu {
 
-    position: relative;
-    overflow: hidden;
+     position: relative;
+     overflow: hidden;
      height: 69px;
      border-radius: 15.043px;
      background-color: #ffff;
@@ -353,20 +347,6 @@ main {
          justify-content: space-between;
      }
     
+    
  }
-    // .cards-animation {
-    //     right: 150px;
-    //     position: absolute;
-    //     border-radius: 0 15.043px 15.043px 0;
-    //     background-color: $border-h2;
-    //     width: 63px;
-    //     height: 69px;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    // }
-    // .fa-circle-check{
-    //     font-size: 1.25em;
-    //     color: white;
-    // }
-}
+   
