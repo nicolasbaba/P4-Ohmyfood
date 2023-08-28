@@ -537,26 +537,32 @@ main .cards-main {
     margin-right: auto;
   }
 }
-main h1 {
-  margin: 32px 0 40px 17px;
+main .cards-main .name {
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 768px) {
+  main .cards-main .name {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+  }
+}
+main .cards-main .icone {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  display: inline-block;
+  margin-left: 48px;
+  top: 42px;
+}
+main .cards-main h1 {
+  margin: 32px 0 0 17px;
   position: relative;
   font-size: 28px;
   font-family: "Shrikhand";
 }
-@media (min-width: 768px) {
-  main h1 {
-    display: flex;
-    justify-content: space-around;
-  }
-}
-main h1 .fa-regular,
-main h1 .fa-solid {
-  font-size: 1.25rem;
-  top: 12px;
-  z-index: 1;
-}
-
-.titre {
+main .cards-main .titre {
   display: flex;
   flex-direction: row;
   margin: 40px 0 0 12px;
@@ -565,19 +571,20 @@ main h1 .fa-solid {
   width: 40px;
   border-color: #99E2D0;
   font-size: 16px;
+  font-weight: normal;
+  margin-top: 40px;
 }
 @media (min-width: 768px) {
-  .titre {
-    margin: 0 110px 0 111px;
+  main .cards-main .titre {
+    margin: 40px 110px 0 111px;
   }
 }
 @media (min-width: 1200px) {
-  .titre {
+  main .cards-main .titre {
     margin-left: 210px;
   }
 }
-
-.cards-menu {
+main .cards-main .cards-menu {
   position: relative;
   overflow: hidden;
   height: 69px;
@@ -590,36 +597,36 @@ main h1 .fa-solid {
   margin: 0 12px 0 12px;
 }
 @media (min-width: 768px) {
-  .cards-menu {
+  main .cards-main .cards-menu {
     margin: 0 110px 0 111px;
   }
 }
 @media (min-width: 1200px) {
-  .cards-menu {
+  main .cards-main .cards-menu {
     margin: 0 210px 0 211px;
   }
 }
-.cards-menu h3 {
+main .cards-main .cards-menu h3 {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin: 15px 15px 0px 15px;
   font-size: 18px;
 }
-.cards-menu p {
+main .cards-main .cards-menu p {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-left: 15px;
   font-size: 15.043px;
 }
-.cards-menu .price {
+main .cards-main .cards-menu .price {
   transition: transform 500ms ease-in-out;
   font-weight: bold;
   overflow: visible;
   margin-right: 16px;
 }
-.cards-menu .product-price {
+main .cards-main .cards-menu .product-price {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
