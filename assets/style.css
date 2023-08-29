@@ -549,15 +549,12 @@ main .cards-main .name {
   }
 }
 main .cards-main .icone {
-  width: 22px;
-  height: 22px;
   position: relative;
-  display: inline-block;
   margin-left: 48px;
   top: 42px;
 }
 main .cards-main h1 {
-  margin: 32px 0 0 17px;
+  margin: 32px 12px 0 17px;
   position: relative;
   font-size: 28px;
   font-family: "Shrikhand";
