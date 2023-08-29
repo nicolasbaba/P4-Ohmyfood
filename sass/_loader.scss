@@ -44,7 +44,7 @@
 }
 
 .loader {
-    animation: hide 4s forwards, move 3s 3s forwards;
+    animation: hide 3s forwards, move 100ms 3s forwards;
 }
 
 @keyframes hide {

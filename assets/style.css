@@ -41,7 +41,7 @@
   }
 }
 .loader {
-  animation: hide 4s forwards, move 3s 3s forwards;
+  animation: hide 3s forwards, move 100ms 3s forwards;
 }
 
 @keyframes hide {
@@ -233,12 +233,12 @@
 
 .dishes {
   animation: appear 2s linear forwards;
-  animation-delay: 1s;
+  animation-delay: 400ms;
 }
 
 .dessert {
   animation: appear 2s linear forwards;
-  animation-delay: 2s;
+  animation-delay: 600ms;
 }
 
 @keyframes appear {
