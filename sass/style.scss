@@ -238,15 +238,21 @@ main {
     flex-direction: column;
     gap: 12px;
     position: relative;
-
+    padding: 0 12px 0 12px;
     @media (min-width: 768px) {
       width: 77%;
       margin-left: auto;
       margin-right: auto;
+      padding: 0 110px 0 111px;
+    }
+    @media (min-width: 1200px) {
+        padding: 0 210px 0 211px;
     }
     .name {
       display: flex;
       flex-direction: row;
+      justify-content: space-between;
+      margin-right: 20px;
       @media (min-width: 768px) {
         display: flex;
         justify-content: space-between;
@@ -255,8 +261,8 @@ main {
     }
     .icone {
       position: relative;
-      margin-left: 48px;
       top: 42px;
+      margin-left: 48px;
     }
    
 
@@ -270,7 +276,6 @@ main {
     .titre {
       display: flex;
       flex-direction: row;
-      margin: 40px 0 0 12px;
       border-bottom: 3px solid;
       height: 30px;
       width: 40px;
@@ -278,13 +283,6 @@ main {
       font-size: 16px;
       font-weight: normal;
       margin-top: 40px;
-      @media (min-width: 768px) {
-        margin: 40px 110px 0 111px;
-      }
-
-      @media (min-width: 1200px) {
-        margin-left: 210px;
-      }
     }
 
     .cards-menu {
@@ -296,16 +294,12 @@ main {
       @include shadow-button-cards;
       display: flex;
       flex-direction: column;
-      margin: 0 12px 0 12px;
-
-      @media (min-width: 768px) {
-        margin: 0 110px 0 111px;
+      
+      .positioning{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
       }
-
-      @media (min-width: 1200px) {
-        margin: 0 210px 0 211px;
-      }
-
       h3 {
         overflow: hidden;
         text-overflow: ellipsis;

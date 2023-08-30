@@ -9,6 +9,7 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  animation: hide 1.5s 1s forwards, move 100ms 2s forwards;
 }
 .loader .spinner {
   width: 150px;
@@ -40,10 +41,6 @@
     transform: rotate(360deg);
   }
 }
-.loader {
-  animation: hide 3s forwards, move 100ms 3s forwards;
-}
-
 @keyframes hide {
   0% {
     opacity: 1;
@@ -529,17 +526,26 @@ main .cards-main {
   flex-direction: column;
   gap: 12px;
   position: relative;
+  padding: 0 12px 0 12px;
 }
 @media (min-width: 768px) {
   main .cards-main {
     width: 77%;
     margin-left: auto;
     margin-right: auto;
+    padding: 0 110px 0 111px;
+  }
+}
+@media (min-width: 1200px) {
+  main .cards-main {
+    padding: 0 210px 0 211px;
   }
 }
 main .cards-main .name {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-right: 20px;
 }
 @media (min-width: 768px) {
   main .cards-main .name {
@@ -550,8 +556,8 @@ main .cards-main .name {
 }
 main .cards-main .icone {
   position: relative;
-  margin-left: 48px;
   top: 42px;
+  margin-left: 48px;
 }
 main .cards-main h1 {
   margin: 32px 12px 0 17px;
@@ -562,7 +568,6 @@ main .cards-main h1 {
 main .cards-main .titre {
   display: flex;
   flex-direction: row;
-  margin: 40px 0 0 12px;
   border-bottom: 3px solid;
   height: 30px;
   width: 40px;
@@ -570,16 +575,6 @@ main .cards-main .titre {
   font-size: 16px;
   font-weight: normal;
   margin-top: 40px;
-}
-@media (min-width: 768px) {
-  main .cards-main .titre {
-    margin: 40px 110px 0 111px;
-  }
-}
-@media (min-width: 1200px) {
-  main .cards-main .titre {
-    margin-left: 210px;
-  }
 }
 main .cards-main .cards-menu {
   position: relative;
@@ -591,17 +586,11 @@ main .cards-main .cards-menu {
   border: none;
   display: flex;
   flex-direction: column;
-  margin: 0 12px 0 12px;
 }
-@media (min-width: 768px) {
-  main .cards-main .cards-menu {
-    margin: 0 110px 0 111px;
-  }
-}
-@media (min-width: 1200px) {
-  main .cards-main .cards-menu {
-    margin: 0 210px 0 211px;
-  }
+main .cards-main .cards-menu .positioning {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 main .cards-main .cards-menu h3 {
   overflow: hidden;
